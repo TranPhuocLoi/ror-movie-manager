@@ -1,0 +1,113 @@
+#preloader
+  img.logo alt="" height="58" src="images/logo1.png" width="119" /
+  #status
+    span
+    span
+header.ht-header
+  .container
+    nav.navbar.navbar-default.navbar-custom
+      .navbar-header.logo
+        .navbar-toggle data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" 
+          span.sr-only Toggle navigation
+          #nav-icon1
+            span
+            span
+            span
+        a href="index.html" 
+          = image_tag('home/logo1.png', width:'119', height: '58', class: "logo")
+      #bs-example-navbar-collapse-1.collapse.navbar-collapse.flex-parent
+        ul.nav.navbar-nav.flex-child-menu.menu-left
+          li.hidden
+            a href="#page-top" 
+          li.dropdown.first
+            a.btn.btn-default.dropdown-toggle.lv1 data-toggle="dropdown" 
+              | Home
+              i.fa.fa-angle-down aria-hidden="true" 
+            ul.dropdown-menu.level1
+              li
+                a href="index.html"  Home 01
+              li
+                a href="homev2.html"  Home 02
+              li
+                a href="homev3.html"  Home 03
+          li.dropdown.first
+            a.btn.btn-default.dropdown-toggle.lv1 data-hover="dropdown" data-toggle="dropdown" 
+              | movies
+              i.fa.fa-angle-down aria-hidden="true" 
+            ul.dropdown-menu.level1
+              li.dropdown
+                a.dropdown-toggle data-toggle="dropdown" href="#" 
+                  | Movie grid
+                  i.ion-ios-arrow-forward
+                ul.dropdown-menu.level2
+                  li
+                    a href="moviegrid.html"  Movie grid
+                  li
+                    a href="moviegridfw.html"  movie grid full width
+              li
+                a href="movielist.html"  Movie list
+              li
+                a href="moviesingle.html"  Movie single
+              li.it-last
+                a href="seriessingle.html"  Series single
+          li.dropdown.first
+            a.btn.btn-default.dropdown-toggle.lv1 data-hover="dropdown" data-toggle="dropdown" 
+              | celebrities
+              i.fa.fa-angle-down aria-hidden="true" 
+            ul.dropdown-menu.level1
+              li
+                a href="celebritygrid01.html"  celebrity grid 01
+              li
+                a href="celebritygrid02.html"  celebrity grid 02
+              li
+                a href="celebritylist.html"  celebrity list
+              li.it-last
+                a href="celebritysingle.html"  celebrity single
+          li.dropdown.first
+            a.btn.btn-default.dropdown-toggle.lv1 data-hover="dropdown" data-toggle="dropdown" 
+              | news
+              i.fa.fa-angle-down aria-hidden="true" 
+            ul.dropdown-menu.level1
+              li
+                a href="bloglist.html"  blog List
+              li
+                a href="bloggrid.html"  blog Grid
+              li.it-last
+                a href="blogdetail.html"  blog Detail
+          li.dropdown.first
+            a.btn.btn-default.dropdown-toggle.lv1 data-hover="dropdown" data-toggle="dropdown" 
+              | community
+              i.fa.fa-angle-down aria-hidden="true" 
+            ul.dropdown-menu.level1
+              li
+                a href="userfavoritegrid.html"  user favorite grid
+              li
+                a href="userfavoritelist.html"  user favorite list
+              li
+                a href="userprofile.html"  user profile
+              li.it-last
+                a href="userrate.html"  user rate
+        ul.nav.navbar-nav.flex-child-menu.menu-right
+          li.dropdown.first
+            a.btn.btn-default.dropdown-toggle.lv1 data-hover="dropdown" data-toggle="dropdown" 
+              | pages
+              i.fa.fa-angle-down aria-hidden="true" 
+            ul.dropdown-menu.level1
+              li
+                a href="landing.html"  Landing
+              li
+                a href="404.html"  404 Page
+              li.it-last
+                a href="comingsoon.html"  Coming soon
+          li
+            a href="#"  Help
+          li.loginLink
+            a href="#"  LOG In
+          li.btn.signupLink
+            a href="#"  sign up
+    form action="#" 
+      .top-search
+        select
+          option value="united"  TV show
+          option value="saab"  Others
+        input placeholder=("Search for a movie, TV Show or celebrity that you are looking for") type="text" /

@@ -1,0 +1,38 @@
+.page__content
+  = render 'xgt_menu'
+  .page__stat_pt32
+    .widget.widget_shadow.widget-mobile
+      .widget__title.h5 Current Invest
+      .products__flex.products__cards
+        - @projects.each do |project, index|
+          = form_for :project_action, url: xgt_project_action_wallets_exchange_index_path, method: :post, html: { class: "products__flex products__cards" } do |f|
+            = f.hidden_field :xgt_project_id, value: project.id
+            = f.hidden_field :lock_id, value: project.id
+            .flex__col.flex__pd-1.min-w-250
+              .widget.widget_cards.widget_purple
+                .widget__card-header.d__flex.flex__items-center
+                  .payment__preview.bg-white.m-0.mr-2
+                    = image_tag("wallets/ic_#{project.name.delete(' ').downcase}.svg", class: "payment__pic", width: '40')
+                  h2.color-white
+                    = project.name
+                .widget__wrap
+                  .widget__card-body
+                    .line__item.mb-2
+                      .line__item-label.color-gray.font-weight-bold Current Lock
+                      .line__item-value= "1 lot = " + project.amount_per_lot.to_i.to_s + " xGT"
+                    .line__item.mb-2
+                      .line__item-label.color-gray.font-weight-bold Number of Possible investment lots
+                      .line__item-value = project.remaining_lot
+                  form.widget__card-footer
+                    .popup__field.field
+                      .field__wrap
+                        input.field__input[name="xgt_lot" min="0" max="#{project.amount_per_lot.floor}" step="1" type="number" placeholder="Enter the lot number"]
+                    br
+                    .popup__field.field
+                      .field__wrap
+                        = f.select :select_action, options_for_select([['Lock', 'Lock']]),{}, {class: 'field__input'}
+                    br
+                    .widget__btn
+                      = button_tag(type: 'submit', class: "widget__btn btn btn_purple btn_wide") do
+                        | Action
+= render 'purchase'

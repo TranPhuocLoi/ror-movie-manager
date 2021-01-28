@@ -1,0 +1,57 @@
+.page__content
+  = render 'xgt_menu'
+  .page__stat_pt32
+    .widget.widget_shadow.widget-mobile
+      - @projects.each do |pj|
+        .widget__title.h5
+          | Record xGT
+        .widget__card-header.d__flex.flex__items-center
+          .payment__preview.bg-white.m-0.size-60
+            = image_tag("wallets/ic_#{pj.name.delete(' ').downcase}.svg", class: "payment__pic", width: '40')
+          h2
+            = pj.name
+        .products__flex.products__cards
+          .flex__col.flex__pd-1.min-w-250
+            .widget.widget_cards.p-0
+              .widget__wrap.p-0
+                .widget__card-body
+                  .line__item.mb-2
+                    .line__item-label.font-weight-bold.color-gray  Now Locking
+                    .line__item-value
+                      .table-responsive
+                        table.table.table-bordered
+                          thead
+                            tr
+                              th
+                                | Started Date
+                              th
+                                | Lot
+                          tbody
+                            - XgtLockLog.where(xgt_project_id: pj.id, user_id: current_web_user.id, unlocked_date: nil).each do |locked_log|
+                              tr
+                                td = locked_log.locked_date
+                                td = locked_log.lot
+          .flex__col.flex__pd-1.min-w-300
+            .widget.widget_cards.p-0
+              .widget__wrap.p-0
+                .widget__card-body
+                  .line__item.mb-2
+                    .line__item-label.font-weight-bold.color-gray Unlocked
+                    .line__item-value
+                      .table-responsive
+                        table.table.table-bordered
+                          thead
+                            tr
+                              th
+                                | Started Date
+                              th
+                                | Unlocked Date
+                              th
+                                | Lot
+                          tbody
+                            - XgtLockLog.where(xgt_project_id: pj.id, user_id: current_web_user.id).where.not(unlocked_date: nil).each do |unlocked_log|
+                              tr
+                                td = unlocked_log.locked_date
+                                td = unlocked_log.unlocked_date
+                                td = unlocked_log.lot
+= render "wallets/exchange/purchase"

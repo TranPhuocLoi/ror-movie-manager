@@ -1,0 +1,52 @@
+.sidebar
+  .sidebar__top
+    button.sidebar__close
+      = svg_use('wallets/images/sprite.svg#icon-close', class: 'icon icon-close')
+    a.sidebar__logo href="#"
+      = image_tag('nudo-logo.svg', class: "sidebar__pic sidebar__pic_black", width: 100)
+      = image_tag('nudo-logo.svg', class: "sidebar__pic sidebar__pic_white", width: 100)
+    button.sidebar__burger
+  .sidebar__wrapper
+    .sidebar__inner
+      a.sidebar__logo href="#"
+        = image_tag('nudo-logo.svg', class: "sidebar__pic logo-sm")
+      .sidebar__list
+        .sidebar__group
+          .sidebar__caption
+            | Nudo
+            span Cinema
+          .sidebar__menu
+            = link_to '#', class: "sidebar__item #{active_class?(admin_root_path)}" do
+              .sidebar__icon
+                = svg_use('wallets/images/sprite.svg#icon-overview', class: 'icon icon-overview')
+              .sidebar__text My Collection
+            = link_to '#', class: "sidebar__item #{active_class?(web_root_path)}" do
+              .sidebar__icon
+                = svg_use('wallets/images/sprite.svg#icon-chart', class: 'icon icon-bag')
+              .sidebar__text Bookmark
+            = link_to '#', class: "sidebar__item #{active_class?(web_root_path)}" do
+              .sidebar__icon
+                = svg_use('wallets/images/sprite.svg#icon-wallet', class: 'icon icon-wallet')
+              .sidebar__text History
+            = link_to '#', class: "sidebar__item #{active_class?(web_root_path)}" do
+              .sidebar__icon
+                = svg_use('wallets/images/sprite.svg#icon-wallet', class: 'icon icon-wallet')
+              .sidebar__text Subscriptions
+            = link_to '#', class: "sidebar__item #{active_class?(web_root_path)}" do
+              .sidebar__icon
+                = svg_use('wallets/images/sprite.svg#icon-document', class: 'icon icon-document')
+              .sidebar__text Movie Liked
+            = link_to '#', class: "sidebar__item #{active_class?(web_root_path)}" do
+              .sidebar__icon
+                = svg_use('wallets/images/sprite.svg#icon-settings', class: 'icon icon-settings')
+              .sidebar__text Settings
+  .sidebar__bottom
+    label.switch.switch_theme.js-switch-theme
+      input.switch__input type="checkbox" /
+      span.switch__in
+        span.switch__box
+        span.switch__icon
+          svg.icon.icon-moon
+            use xlink:href="wallets/images/sprite.svg#icon-moon"
+          svg.icon.icon-sun
+            use xlink:href="wallets/images/sprite.svg#icon-sun"

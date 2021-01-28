@@ -1,5 +1,5 @@
 #preloader
-  img.logo alt="" height="58" src="images/logo1.png" width="119" /
+  = image_tag('home/nudo-logo.svg', class: "footer-logo")
   #status
     span
     span
@@ -14,7 +14,7 @@ header.ht-header
             span
             span
         a href="index.html" 
-          = image_tag('home/logo1.png', width:'119', height: '58', class: "logo")
+          = image_tag('home/nudo-logo.svg', width:'119', height: '58', class: "logo")
       #bs-example-navbar-collapse-1.collapse.navbar-collapse.flex-parent
         ul.nav.navbar-nav.flex-child-menu.menu-left
           li.hidden

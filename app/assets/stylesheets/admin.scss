@@ -1,9 +1,5 @@
 @import "bootstrap";
 @import "ionicons";
 @import "font-awesome";
-.menu-title {
-  color: red;
-}
-span {
-  color: red;
-}
+@import "wallets/app";
+@import "wallets/custom";

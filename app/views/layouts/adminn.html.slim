@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
+    meta content=("IE=edge") http-equiv="X-UA-Compatible" /
+    meta content=("width=device-width, initial-scale=1") name="viewport" /
+    meta content=("") name="description" /
+    meta content=("") name="keywords" /
+    title Admin | Movie App
+    / = favicon_link_tag 'logo.svg', rel: 'shortcut icon', type: 'image/svg'
+    / = favicon_link_tag 'logo.svg', rel: 'apple-touch-icon', type: 'image/svg'
+    = csrf_meta_tags
+    = csp_meta_tag
+    link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet" /
+    = stylesheet_link_tag 'admin', media: 'all'
+  body
+    main#wrapper.wrapper
+      =render 'layouts/admin_header'
+      =render 'layouts/admin_sidebar'
+      .content-page
+        .content
+          .container-fluid
+            = render 'layouts/admin_page_title'
+            = yield
+      =render 'layouts/admin_footer'
+    / = javascript_include_tag 'web'

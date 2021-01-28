@@ -1,0 +1,15 @@
+.page__content
+  = render 'xgt_menu'
+  .page__stat_pt32
+    .widget.widget_shadow.widget-mobile
+      .widget__title.h5
+        | Lock xGT
+        p.subtitle Please enter the number of lot in object to invest.
+      = form_tag lock_all_wallets_exchange_index_path, method: :post, :class => "products__flex products__cards" do |f|
+        - @projects.each do |project, index|
+          = fields_for 'xgt_multi_lock_log[]', project do |lock_form|
+            = render 'lock_form', :f => lock_form, :project => project, :i => index
+        .flex__col-100.flex__pd-1.mt-5
+          = button_tag(type: 'submit', class: "btn bg-yellow btn_wide") do
+            | Lock
+= render "wallets/exchange/purchase"

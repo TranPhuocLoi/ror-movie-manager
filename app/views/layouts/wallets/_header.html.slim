@@ -1,0 +1,120 @@
+.page__row.page__row_head
+  .page__col
+    .page__hello.h5= "Hi Nudo"
+    .page__welcome.h2
+      | Welcome back
+      span.desktop-hide 👋
+  .page__col
+    .header
+      button.header__burger
+      .notifications
+        button.notifications__open
+          = svg_use('wallets/images/sprite.svg#icon-bell', class: 'icon icon-bell')
+          span.notifications__counter
+        .notifications__wrap
+          / .notifications__info.h6
+          /   | Recent Notification
+          / .notifications__list
+          /   a.notifications__item href="#" 
+          /     .notifications__ava
+          /       = image_tag('wallets/images/ava-1.png', class: "notifications__pic")
+          /       .notifications__status.bg-blue
+          /         = image_tag('wallets/images/chat.svg', class: "notifications__pic")
+          /     .notifications__details
+          /       .notifications__line
+          /         .notifications__user.caption
+          /           | Sarah Saunders
+          /         .notifications__time.caption 8h
+          /       .notifications__text.caption-sm
+          /         | Commented on
+          /         span.notifications__project Collab Design
+          /   a.notifications__item href="#" 
+          /     .notifications__ava
+          /       = image_tag('wallets/images/ava-1.png', class: "notifications__pic")
+          /       .notifications__status.bg-green
+          /         = image_tag('wallets/images/bag.svg', class: "notifications__pic")
+          /     .notifications__details
+          /       .notifications__line
+          /         .notifications__user.caption
+          /           | Glenn Greer
+          /         .notifications__time.caption 12h
+          /       .notifications__text.caption-sm
+          /         | Just pushaded
+          /         span.notifications__project Sapiens Illustration
+          /   a.notifications__item href="notifications.html" 
+          /     .notifications__ava
+          /       = image_tag('wallets/images/ava-1.png', class: "notifications__pic")
+          /       .notifications__status.bg-purple
+          /         = image_tag('wallets/images/message.svg', class: "notifications__pic")
+          /     .notifications__details
+          /       .notifications__line
+          /         .notifications__user.caption
+          /           | Sarah Saunders
+          /         .notifications__time.caption 14h
+          /       .notifications__text.caption-sm
+          /         | Sent you a message 📪
+          /   a.notifications__item href="notifications.html" 
+          /     .notifications__ava
+          /       = image_tag('wallets/images/ava-1.png', class: "notifications__pic")
+          /       .notifications__status.bg-red
+          /         = image_tag('wallets/images/heart.svg', class: "notifications__pic")
+          /     .notifications__details
+          /       .notifications__line
+          /         .notifications__user.caption
+          /           | Sarah Saunders
+          /         .notifications__time.caption 21h
+          /       .notifications__text.caption-sm
+          /         | Liked
+          /         span.notifications__project Folio Agency
+          /   a.notifications__item href="notifications.html" 
+          /     .notifications__ava
+          /       = image_tag('wallets/images/ava-1.png', class: "notifications__pic")
+          /       .notifications__status.bg-blue
+          /         = image_tag('wallets/images/chat.svg', class: "notifications__pic")
+          /     .notifications__details
+          /       .notifications__line
+          /         .notifications__user.caption
+          /           | Sarah Saunders
+          /         .notifications__time.caption 8h
+          /       .notifications__text.caption-sm
+          /         | Commented on
+          /         span.notifications__project Collab Design
+          /   a.notifications__item href="notifications.html" 
+          /     .notifications__ava
+          /       = image_tag('wallets/images/ava-1.png', class: "notifications__pic")
+          /       .notifications__status.bg-green
+          /         = image_tag('wallets/images/bag.svg', class: "notifications__pic")
+          /     .notifications__details
+          /       .notifications__line
+          /         .notifications__user.caption
+          /           | Glenn Greer
+          /         .notifications__time.caption 12h
+          /       .notifications__text.caption-sm
+          /         | Just pushaded
+          /         span.notifications__project Sapiens Illustration
+          / .notifications__btns
+            a.notifications__btn.btn.btn_black href="#"  See all incoming activity
+      .sidebar__profile
+        a.sidebar__user href="#" 
+          .sidebar__ava
+            = image_tag('wallets/images/ava.png', class: "sidebar__pic")
+          .sidebar__desc
+            / .sidebar__man= current_web_user.email.split('@')[0]
+            / .sidebar__status.caption Free account
+          .sidebar__arrow
+            = svg_use('wallets/images/sprite.svg#icon-arrows', class: 'icon icon-arrows')
+        .sidebar__details
+          = link_to '#', class: 'sidebar__link text-danger'
+            .sidebar__icon
+              = svg_use('wallets/images/sprite.svg#icon-profile', class: 'icon icon-profile')
+            .sidebar__text Profile
+          = link_to '#', method: "get", class: 'sidebar__link' do
+            .sidebar__icon
+              = svg_use('wallets/images/sprite.svg#icon-logout', class: 'icon icon-logout')
+            .sidebar__text Log out
+          / a.sidebar__link href="#" 
+          /   .sidebar__icon
+          /     = svg_use('wallet/images/sprite.svg#icon-logout', class: 'icon icon-logout')
+          /   .sidebar__text Log out
+      / a.header__user href="#" 
+      /   = image_tag('wallets/images/ava.png', class: "header__pic")

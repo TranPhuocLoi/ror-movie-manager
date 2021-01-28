@@ -4,7 +4,12 @@ Rails.application.routes.draw do
     root "home#index"
   end
 
+  
+
   scope '/admin', module: :admin, as: :admin do
     root 'movies_dashboard#index'
+    # post "movie", to: 'movies_dashboard#create'
+    resources :movies
   end
+  
 end

@@ -1,2 +1,10 @@
 //= require jquery3
 //= require bootstrap-sprockets
+//= require wallets/lib/jquery.min
+//= require wallets/lib/apexcharts.min
+//= require wallets/lib/jquery.magnific-popup.min
+//= require wallets/lib/owl.carousel.min
+//= require wallets/lib/svg4everybody.min
+//= require wallets/app
+//= require wallets/charts
+//= require wallets/custom

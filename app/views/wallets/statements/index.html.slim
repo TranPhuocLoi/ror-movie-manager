@@ -1,0 +1,311 @@
+.page__row.page__row_border
+  .page__col
+    .details.details_statements
+      .details__container
+        .details__title.h6.mobile-hide Earnings Report
+        .dropdown.js-dropdown
+          .dropdown__head.js-dropdown-head Last 30 days
+          .dropdown__body.js-dropdown-body
+            a.dropdown__item href="#" 
+              .dropdown__title.title Bento 3D Kit
+              .dropdown__info.caption Illustration
+            a.dropdown__item href="#" 
+              .dropdown__title.title Bento 3D Kit
+              .dropdown__info.caption Illustration
+            a.dropdown__item href="#" 
+              .dropdown__title.title Collab UI Kit
+              .dropdown__info.caption Coded Template
+        .details__row
+          .details__col
+            .details__top
+              .details__number.h1 $586
+              a.details__line href="#" 
+                .details__preview
+                  = image_tag('wallets/images/details-pic-1.png', class: "details__pic")
+                .details__info.caption-sm Your total earnings
+            .details__bottom
+              .details__statistics
+                .details__chart.details__chart_activity
+                  #chart-active-users
+                .details__status
+                  .details__icon.bg-green
+                    = svg_use('wallets/images/sprite.svg#icon-arrow-up-fat', class: 'icon icon-arrow-up-fat')
+                  .details__percent.caption-sm.color-green 6%
+              .details__info.caption-sm Update your payout method in Settings
+          .details__col
+            .details__chart.details__chart_report
+              #chart-report
+        .details__list.details__list_three
+          .details__item
+            .details__head
+              .details__preview.bg-purple
+                = image_tag('wallets/images/folder.svg', class: "details__pic")
+              .details__text.caption-sm Total Earnings
+            .details__counter.h4 $586.75
+            .details__indicator
+              .details__progress.bg-purple style=("width: 55%;") 
+          .details__item
+            .details__head
+              .details__preview.bg-pink
+                = image_tag('wallets/images/activity.svg', class: "details__pic")
+              .details__text.caption-sm Item Earnings
+            .details__counter.h4 $425.94
+            .details__indicator
+              .details__progress.bg-pink style=("width: 52%;") 
+          .details__item
+            .details__head
+              .details__preview.bg-blue
+                = image_tag('wallets/images/bag.svg', class: "details__pic")
+              .details__text.caption-sm Tax withheld
+            .details__counter.h4 $25.94
+            .details__indicator
+              .details__progress.bg-blue style=("width: 55%;") 
+    .page__nav.mobile-hide
+      a.page__link.active href="#"  Last 30 Days
+      a.page__link href="#"  Aug 2020
+      a.page__link href="#"  Jul 2020
+    .page__stat.page__stat_sm
+      .sorting.mobile-show
+        .sorting__row
+          .sorting__col
+            .sorting__dropdowns
+              .dropdown.js-dropdown
+                .dropdown__head.js-dropdown-head Last 30 days
+                .dropdown__body.js-dropdown-body
+                  a.dropdown__item href="#" 
+                    .dropdown__title.title Bento 3D Kit
+                    .dropdown__info.caption Illustration
+                  a.dropdown__item href="#" 
+                    .dropdown__title.title Bento 3D Kit
+                    .dropdown__info.caption Illustration
+                  a.dropdown__item href="#" 
+                    .dropdown__title.title Collab UI Kit
+                    .dropdown__info.caption Coded Template
+              .dropdown.js-dropdown
+                .dropdown__head.js-dropdown-head Aug 2020
+                .dropdown__body.js-dropdown-body
+                  a.dropdown__item href="#" 
+                    .dropdown__title.title Bento 3D Kit
+                    .dropdown__info.caption Illustration
+                  a.dropdown__item href="#" 
+                    .dropdown__title.title Bento 3D Kit
+                    .dropdown__info.caption Illustration
+                  a.dropdown__item href="#" 
+                    .dropdown__title.title Collab UI Kit
+                    .dropdown__info.caption Coded Template
+          .sorting__col
+            .sorting__line
+              .sorting__search
+                button.sorting__open
+                  = svg_use('wallets/images/sprite.svg#icon-search', class: 'icon icon-search')
+                input.sorting__input placeholder="Search" type="text" /
+              .sorting__actions
+                button.sorting__action
+                  = svg_use('wallets/images/sprite.svg#icon-print', class: 'icon icon-print')
+                button.sorting__action
+                  = svg_use('wallets/images/sprite.svg#icon-download-fat', class: 'icon icon-download-fat')
+      .sorting.mobile-hide
+        .sorting__actions
+          button.sorting__action
+            = svg_use('wallets/images/sprite.svg#icon-print', class: 'icon icon-print')
+          button.sorting__action
+            = svg_use('wallets/images/sprite.svg#icon-download-fat', class: 'icon icon-download-fat')
+      .products.products_statement
+        .products__title.h6.mobile-hide Statement
+        .products__info.caption.mobile-hide Please note: Transactions are based Time in California, USA.
+        .products__table
+          .products__row.products__row_head
+            .products__cell
+              label.checkbox
+                input.checkbox__input type="checkbox" /
+                span.checkbox__in
+                  span.checkbox__tick
+            .products__cell Date
+            .products__cell Order ID
+            .products__cell Amount
+            .products__cell Price
+            .products__cell.text-right Type
+          .products__row
+            .products__cell
+              label.checkbox
+                input.checkbox__input type="checkbox" /
+                span.checkbox__in
+                  span.checkbox__tick
+            .products__cell.color-gray 17 Aug 2020
+            .products__cell 39511350
+            .products__cell $68.00
+            .products__cell.color-red -68.00
+            .products__cell.text-right
+              .products__status.caption.bg-green Sale
+          .products__body
+            .products__bg.bg-green
+            .products__line
+              .products__col.color-gray 17 Aug 2020
+              .products__col $68.00
+              .products__col.color-red -68.00
+          .products__row
+            .products__cell
+              label.checkbox
+                input.checkbox__input type="checkbox" /
+                span.checkbox__in
+                  span.checkbox__tick
+            .products__cell.color-gray 17 Aug 2020
+            .products__cell 39511350
+            .products__cell $68.00
+            .products__cell.color-red -68.00
+            .products__cell.text-right
+              .products__status.caption.bg-green Sale
+          .products__body
+            .products__bg.bg-green
+            .products__line
+              .products__col.color-gray 17 Aug 2020
+              .products__col $68.00
+              .products__col.color-red -68.00
+          .products__row
+            .products__cell
+              label.checkbox
+                input.checkbox__input type="checkbox" /
+                span.checkbox__in
+                  span.checkbox__tick
+            .products__cell.color-gray 17 Aug 2020
+            .products__cell 39511350
+            .products__cell $68.00
+            .products__cell.color-red -68.00
+            .products__cell.text-right
+              .products__status.caption.bg-green Sale
+          .products__body
+            .products__bg.bg-green
+            .products__line
+              .products__col.color-gray 17 Aug 2020
+              .products__col $68.00
+              .products__col.color-red -68.00
+          .products__row
+            .products__cell
+              label.checkbox
+                input.checkbox__input type="checkbox" /
+                span.checkbox__in
+                  span.checkbox__tick
+            .products__cell.color-gray 17 Aug 2020
+            .products__cell 39511350
+            .products__cell $68.00
+            .products__cell.color-red -68.00
+            .products__cell.text-right
+              .products__status.caption.bg-green Sale
+          .products__body
+            .products__bg.bg-green
+            .products__line
+              .products__col.color-gray 17 Aug 2020
+              .products__col $68.00
+              .products__col.color-red -68.00
+          .products__row
+            .products__cell
+              label.checkbox
+                input.checkbox__input type="checkbox" /
+                span.checkbox__in
+                  span.checkbox__tick
+            .products__cell.color-gray 17 Aug 2020
+            .products__cell 39511350
+            .products__cell $68.00
+            .products__cell.color-red -68.00
+            .products__cell.text-right
+              .products__status.caption.bg-green Sale
+          .products__body
+            .products__bg.bg-green
+            .products__line
+              .products__col.color-gray 17 Aug 2020
+              .products__col $68.00
+              .products__col.color-red -68.00
+          .products__row
+            .products__cell
+              label.checkbox
+                input.checkbox__input type="checkbox" /
+                span.checkbox__in
+                  span.checkbox__tick
+            .products__cell.color-gray 17 Aug 2020
+            .products__cell 39511350
+            .products__cell $68.00
+            .products__cell.color-red -68.00
+            .products__cell.text-right
+              .products__status.caption.bg-green Sale
+          .products__body
+            .products__bg.bg-green
+            .products__line
+              .products__col.color-gray 17 Aug 2020
+              .products__col $68.00
+              .products__col.color-red -68.00
+          .products__row
+            .products__cell
+              label.checkbox
+                input.checkbox__input type="checkbox" /
+                span.checkbox__in
+                  span.checkbox__tick
+            .products__cell.color-gray 17 Aug 2020
+            .products__cell 39511350
+            .products__cell $68.00
+            .products__cell.color-red -68.00
+            .products__cell.text-right
+              .products__status.caption.bg-green Sale
+          .products__body
+            .products__bg.bg-green
+            .products__line
+              .products__col.color-gray 17 Aug 2020
+              .products__col $68.00
+              .products__col.color-red -68.00
+        .products__more
+          button.products__btn.btn.btn_black Load More
+  .page__col
+    .page__group
+      .widget.widget_stat.widget_shadow.widget_after
+        .widget__chart.widget__chart_items
+          #chart-earnings-by-item
+        .widget__title Earnings By Item
+        .widget__counter.title.title_md 479.4
+        .widget__text.widget__text_mb40 Update your payout method in Settings
+        .widget__legend
+          .widget__color
+            .widget__bg style=("background: #3a4dd6;") 
+            .widget__text Templates
+          .widget__color
+            .widget__bg style=("background: #FFA2C0;") 
+            .widget__text Themes
+      .widget.widget_shadow.widget_after
+        .widget__title.mr-auto Your Top Items
+        .quality.quality_big
+          .quality__list
+            a.quality__item href="#" 
+              .quality__preview.bg-pink-opacity
+                = image_tag('wallets/images/figure-1.png', class: "quality__pic")
+              .quality__details
+                .quality__category.title
+                  | Unity UI Kit
+                  = svg_use('wallets/images/sprite.svg#icon-arrow-right', class: 'icon icon-arrow-right')
+                .quality__info.caption-sm UI Design
+                .quality__money.caption $64
+            a.quality__item href="#" 
+              .quality__preview.bg-pink-opacity
+                = image_tag('wallets/images/figure-2.png', class: "quality__pic")
+              .quality__details
+                .quality__category.title
+                  | Unity UI Kit
+                  = svg_use('wallets/images/sprite.svg#icon-arrow-right', class: 'icon icon-arrow-right')
+                .quality__info.caption-sm UI Design
+                .quality__money.caption $64
+            a.quality__item href="#" 
+              .quality__preview.bg-blue-light
+                = image_tag('wallets/images/figure-6.png', class: "quality__pic")
+              .quality__details
+                .quality__category.title
+                  | Unity UI Kit
+                  = svg_use('wallets/images/sprite.svg#icon-arrow-right', class: 'icon icon-arrow-right')
+                .quality__info.caption-sm UI Design
+                .quality__money.caption $64
+            a.quality__item href="#" 
+              .quality__preview.bg-yellow
+                = image_tag('wallets/images/figure-4.png', class: "quality__pic")
+              .quality__details
+                .quality__category.title
+                  | Unity UI Kit
+                  = svg_use('wallets/images/sprite.svg#icon-arrow-right', class: 'icon icon-arrow-right')
+                .quality__info.caption-sm UI Design
+                .quality__money.caption $64
+          button.quality__btn.btn.btn_black.btn_wide Show all report

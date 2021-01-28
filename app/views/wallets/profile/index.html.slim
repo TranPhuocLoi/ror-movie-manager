@@ -1,0 +1,55 @@
+.page__row.page__row_border
+  .page__col
+    .details__container
+      #page__profile.popup
+        = simple_form_for current_web_user, url: wallets_update_profile_path, html: { class: 'popup__form' }, method: :patch do |f|
+          .popup__title.h6 Account Settings
+          .popup__tags.d-block
+            = link_to 'Profile', wallets_profile_path, class: 'popup__tag active'
+            = link_to 'Password', wallets_password_path	, class: 'popup__tag'
+          .popup__user
+            .popup__title.h6.mobile-show Your Profile
+            .popup__category.caption-sm Your Avatar
+            .popup__line
+              .popup__ava
+                - photo = current_web_user.photo.present? ? current_web_user.photo.url : 'wallets/images/ava.png'
+                = image_tag("#{photo}", class: "popup__pic", id: "photo_preview")
+              .popup__details
+                .popup__btns
+                  .popup__loading#btn_upload
+                    button#button_upload.popup__btn.btn.btn_purple[for="photo_upload"] Upload New
+                    = f.file_field :photo, id: "photo_upload", accept:'image/*', class: "popup__file"
+                  button.popup__btn.btn.btn_gray#btn_discard_photo[data-image="#{image_url(photo)}" style="display:none"] Delete Avatar
+                .popup__text
+                  | Avatar help your teammates recognize you in xGT.
+          .popup__fieldset
+            .popup__row
+              .popup__field.field
+                .field__label
+                  = f.label :email, 'Email', :class => "field__label"
+                .field__wrap
+                  = f.input :email, label: false, required: true, readonly: true, input_html: {placeholder: '', autocomplete: "email", class:'field__input'}
+              .popup__field.field
+                .field__label
+                  = f.label :username, 'Username', :class => "field__label"
+                .field__wrap
+                  = f.input :username, label: false, required: true, input_html: {placeholder: '', autocomplete: "username", class:'field__input'}
+            .popup__row
+              .popup__field.field
+                .field__label 
+                  = f.label :firstname, 'First Name', :class => "field__label"
+                .field__wrap
+                  = f.input :firstname, label: false, input_html: {placeholder: '', autocomplete: "firstname", class:'field__input'}
+              .popup__field.field
+                .field__label
+                  = f.label :lastname, 'Last Name', :class => "field__label"
+                .field__wrap
+                  = f.input :lastname, label: false, input_html: {placeholder: '', autocomplete: "lastname", class:'field__input'}
+            .popup__row
+              .popup__field.field.field__password
+                .field__label
+                  = f.label :phone_number, 'Phone Number', :class => "field__label"
+                .field__wrap
+                  = f.input :phone_number, label: false, input_html: {placeholder: '', autocomplete: "phone_number", class:'field__input'}
+          button.popup__btn.btn.btn_black type="submit" 
+            | Update Profile

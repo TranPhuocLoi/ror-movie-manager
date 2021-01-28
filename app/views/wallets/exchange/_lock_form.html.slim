@@ -1,0 +1,20 @@
+.flex__col.flex__pd-1.min-w-300
+  = hidden_field_tag "xgt_multi_lock_log[#{project.id}][xgt_project_id]", "#{project.id}"
+  .widget.widget_cards.widget_purple
+    .widget__card-header.d__flex.flex__items-center
+      .payment__preview.bg-white.m-0.mr-2
+        = image_tag("wallets/ic_#{project.name.delete(' ').downcase}.svg", class: "payment__pic", width: '40')
+      h2.color-white
+        = project.name
+    .widget__wrap
+      .widget__card-body
+        .line__item.mb-2
+          .line__item-label.color-gray.font-weight-bold Current Lock
+          .line__item-value = "1 lot = " + project.amount_per_lot.to_i.to_s + " xGT"
+        .line__item.mb-2
+          .line__item-label.color-gray.font-weight-bold Number of Possible investment lots
+          .line__item-value = project.remaining_lot
+      .widget__card-footer
+        .popup__field.field
+          .field__wrap
+            input.field__input[name="xgt_multi_lock_log[#{project.id}][lot]" min="0" max="#{project.amount_per_lot.floor}" step="1" type="number" placeholder="Enter the lot number"]

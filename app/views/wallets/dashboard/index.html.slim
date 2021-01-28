@@ -1,0 +1,54 @@
+.page__row.page__row_border
+  .page__col
+    .slider
+      .slider__container
+        .slider__inner.owl-carousel.js-slider
+          - @projects.each do |project|
+            .slider__item
+              .slider__details
+                .slider__title.h5
+                  = project.name
+                .slider__text
+                  = "Number of Possible investment lots: #{number_with_delimiter(project.remaining_lot)}"
+                a.slider__btn.btn.btn_white.js-popup-open data-effect="mfp-zoom-in" href="#popup-settings"  Purchase
+              .slider__preview
+                = image_tag("wallets/ic_#{project.name.delete(' ').downcase}.svg", class: "slider__pic")
+                / = image_tag('wallets/images/slider-pic.png', class: "slider__pic")
+          
+        
+    .page__widgets
+      .widget.widget_shadow
+        .widget__title Projects
+        .widget__list
+          - @projects.each do |project|
+            a.widget__item href="products.html" 
+              .widget__preview.bg-white
+                = image_tag("wallets/ic_#{project.name.delete(' ').downcase}.svg", class: "payment__pic", width: '40')
+              .widget__details
+                .widget__category.title
+                  = project.name
+                  = svg_use('wallets/images/sprite.svg#icon-arrow-right', class: 'icon icon-arrow-right')
+                .widget__info.caption= "Number of Possible investment lots: #{number_with_delimiter(project.remaining_lot)}"
+          
+      .widget.widget_chart.widget_purple
+        .widget__title Earnings
+        .widget__wrap
+          .widget__chart.widget__chart_earning
+            #chart-earning
+          .widget__btns
+            button.widget__btn.btn.btn_purple.btn_wide
+              | Analytics
+  .page__col
+    .page__group
+      .widget.widget_stat.widget_pb60
+        .widget__title Your earning this month
+        .widget__counter.title.title_md.color-purple
+          | $0.0
+        .widget__text
+          | Update your payout method in Settings
+        / a.widget__btn.btn.btn_white.btn_wide href="#"  Withdraw All Earnings
+      / .widget.widget_empty.widget_p0
+      /   .widget__title Affiliate Impressions
+      /   .widget__chart.widget__chart_impressions
+      /     #chart-affiliate-impressions
+= render 'setting_account'

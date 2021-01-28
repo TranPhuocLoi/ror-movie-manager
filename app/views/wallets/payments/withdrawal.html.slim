@@ -1,0 +1,69 @@
+.page__content
+  .page__stat_pt32
+    .widget.widget_shadow.widget-mobile
+      .widget__title.h4 Withdrawal
+      .products__flex.products__cards
+        .flex__col.flex__pd-1
+          .widget.widget_cards
+            .widget__wrap
+              .widget__card-body
+                .line__item.mb-2
+                  .line__item-label.color-gray.font-weight-bold Balance
+                  .line__item-value = @balance.to_s + ' ETH'
+                .line__item.mb-2
+                  .line__item-label.color-gray.font-weight-bold Fee Withdrawal
+                  .line__item-value = @total_percentage_fee.to_s + '%'
+                .line__item.mb-2
+                  .line__item-label.color-gray.font-weight-bold Minimum Withdrawal
+                  .line__item-value = @minimum_amount
+              = simple_form_for :withdraw, url: create_withdrawal_wallets_main_index_path, html: {class: 'widget__card-footer'} do |f|
+                = f.hidden_field :coin, value: "eth"
+                .popup__field.field
+                  .field__wrap
+                    = f.input :user_address, placeholder: "Enter the recipient's address", label: false, input_html: {class: 'field__input'}
+                .popup__field.field
+                  .field__wrap
+                    = f.input :amount, placeholder: "Enter the withdraw amount", label: false, input_html: {class: 'field__input', type: 'number', min: '0'}
+                .widget__btn
+                  = button_tag(type: 'submit', class: "widget__btn btn btn_purple btn_wide") do
+                    | Action
+  br
+  .page__stat.page__stat_pt32
+    .products.products_statement
+      .products__title.h6.mobile-hide Recent Withdrawal History
+      .products__table
+        .products__row.products__row_head
+          .products__cell Coin
+          .products__cell Status
+          .products__cell Amount
+          .products__cell Payment Type
+          .products__cell Date
+          .products__cell Infomation
+        - @payments&.each do |payment|
+          .products__row
+            .products__cell.color-gray = payment.currency.symbol.upcase
+            .products__cell = payment.status&.titleize
+            .products__cell = payment.amount
+            .products__cell = payment.payment_type.titleize
+            .products__cell = payment.updated_at
+            .products__cell
+              #heading-id-coin-1
+                .accordion-heading.d-flex.justify-content-between
+                  p.text-thirdary
+                    | Address:
+                    span.text-underline.pl-1.text-primary= payment.user_address
+                  a.text-dark.collapsed[data-toggle="collapse" data-parent="#accordion" href="#collapse-id-coin-1" data-target="#collapse-id-coin-1" role="button" aria-expanded="false" aria-controls="collapse-id-coin-1"]
+                    i.mdi.mdi-arrow-down-drop-circle-outline
+              #collapse-id-coin-1.collapse[aria-labelledby="heading-id-coin-1" data-parent="#accordion"]
+                .accordion-body.text-thirdary
+                  | TxID:
+                  = link_to "#{crypto_transaction_link(payment.currency.symbol, payment.tx_id)}", target: '_blank' do
+                    span.text-underline.pl-1.text-primary = payment.tx_id
+      .products__more
+        - if @payments.present?
+          .col-12
+            .row
+              .col-sm-12.col-md-5
+                = page_entries_info @payments
+              .col-sm-12.col-md-7.text-right
+                = paginate @payments

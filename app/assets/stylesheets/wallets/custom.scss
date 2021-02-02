@@ -401,3 +401,21 @@ div#qr-code-image {
   background: #2136cc !important;
   color: #ffffff;
 }
+
+.movie_desc {
+  white-space: nowrap;
+  width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.field_custom {
+  width: 100% !important;
+  flex: 1 !important;
+}
+.products__previeww {
+  max-width: 200px;
+  img {
+    width: 100%;
+  }
+}

@@ -9,9 +9,10 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
-//
+//= require jquery
 //= require rails-ujs
-//= require jquery3
+//= require turbolinks
+//= require_tree
 //= require wallets/lib/jquery.min
 //= require wallets/lib/apexcharts.min
 //= require wallets/lib/jquery.magnific-popup.min

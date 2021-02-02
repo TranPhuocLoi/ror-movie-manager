@@ -5,7 +5,7 @@
         = image_tag('wallets/images/banner-pic.png', class: "banner__pic")
       .banner__wrap
         .banner__title.h3 Unique views this month 5678 views
-        = link_to 'Add New Moive',new_admin_movie_path, class:'banner__btn btn btn_white'
+        = link_to 'Add New Movie', new_admin_movie_path, class:'banner__btn btn btn_white'
   .page__stat.page__stat_pt32
     .sorting
       .sorting__row
@@ -49,303 +49,39 @@
     .products.products_main
       .products__table
         .products__row.products__row_head
-          .products__cell
-            label.checkbox
-              input.checkbox__input type="checkbox" /
-              span.checkbox__in
-                span.checkbox__tick
-          .products__cell Product
-          .products__cell Amount
-          .products__cell Color
-          .products__cell Price
+          .products__cell Title
+          .products__cell Language
+          .products__cell Status
+          .products__cell Genres
           .products__cell Rating
-        .products__row
-          .products__cell
-            label.checkbox
-              input.checkbox__input type="checkbox" /
-              span.checkbox__in
-                span.checkbox__tick
-          .products__cell
-            a.products__item href="#" 
-              .products__preview
-                = image_tag('wallets/images/product-pic.png', class: "products__pic")
-              .products__details
-                .products__title.title Abstract 3D Kit
-                .products__info.caption.color-gray 3D Illustration
-          .products__cell
-            .products__payment 37 in stock
-          .products__cell
-            .products__color
-              .products__bg style=("background-color: #3a4dd6;") 
-              .products__text Purple
-          .products__cell
-            .products__cost
-              .products__money $68.00
-              .products__tooltip
-                .products__sale
-                  .products__icon.bg-red
-                    img.products__pic alt="" src="wallets/images/chat-black.svg" /
-                    = image_tag('wallets/images/chat-black.svg', class: "products__pic")
-                  .products__caption.caption-sm Latest Sale
-                .products__price.h3 $68
-                .products__progress
-                  span style=("width: 68%;") 
-          .products__cell
-            .products__rating
-              span.color-green 5.0
-              | (45 votes)
-        .products__body
-          .products__bg style=("background-color: #3a4dd6;") 
-          .products__line
-            .products__col
-              .products__money $68.45
-            .products__col 37 in stock
-            .products__col.color-green 5.0
-        .products__row
-          .products__cell
-            label.checkbox
-              input.checkbox__input type="checkbox" /
-              span.checkbox__in
-                span.checkbox__tick
-          .products__cell
-            a.products__item href="#" 
-              .products__preview
-                = image_tag('wallets/images/product-pic.png', class: "products__pic")
-              .products__details
-                .products__title.title Sapiens Illustration
-                .products__info.caption.color-gray 3D Illustration
-          .products__cell
-            .products__payment 37 in stock
-          .products__cell
-            .products__color
-              .products__bg style=("background-color: #7FBA7A;") 
-              .products__text Green
-          .products__cell
-            .products__cost
-              .products__money $68.00
-              .products__tooltip
-                .products__sale
-                  .products__icon.bg-red
-                    = image_tag('wallets/images/chat-black.svg', class: "products__pic")
-                  .products__caption.caption-sm Latest Sale
-                .products__price.h3 $68
-                .products__progress
-                  span style=("width: 68%;") 
-          .products__cell
-            .products__rating
-              span.color-green 5.0
-              | (45 votes)
-        .products__body
-          .products__bg style=("background-color: #7FBA7A;") 
-          .products__line
-            .products__col
-              .products__money $68.45
-            .products__col 37 in stock
-            .products__col.color-green 5.0
-        .products__row
-          .products__cell
-            label.checkbox
-              input.checkbox__input type="checkbox" /
-              span.checkbox__in
-                span.checkbox__tick
-          .products__cell
-            a.products__item href="#" 
-              .products__preview
-                 = image_tag('wallets/images/product-pic.png', class: "products__pic")
-              .products__details
-                .products__title.title Collab Landing Page
-                .products__info.caption.color-gray 3D Illustration
-          .products__cell
-            .products__payment 37 in stock
-          .products__cell
-            .products__color
-              .products__bg style=("background-color: #FFCE73;") 
-              .products__text Yellow
-          .products__cell
-            .products__cost
-              .products__money $68.00
-              .products__tooltip
-                .products__sale
-                  .products__icon.bg-red
-                    = image_tag('wallets/images/chat-black.svg', class: "products__pic")
-                  .products__caption.caption-sm Latest Sale
-                .products__price.h3 $68
-                .products__progress
-                  span style=("width: 68%;") 
-          .products__cell
-            .products__rating
-              span.color-green 5.0
-              | (45 votes)
-        .products__body
-          .products__bg style=("background-color: #FFCE73;") 
-          .products__line
-            .products__col
-              .products__money $68.45
-            .products__col 37 in stock
-            .products__col.color-green 5.0
-        .products__row
-          .products__cell
-            label.checkbox
-              input.checkbox__input type="checkbox" /
-              span.checkbox__in
-                span.checkbox__tick
-          .products__cell
-            a.products__item href="#" 
-              .products__preview
-                = image_tag('wallets/images/product-pic.png', class: "products__pic")
-              .products__details
-                .products__title.title Abstract 3D Kit
-                .products__info.caption.color-gray 3D Illustration
-          .products__cell
-            .products__payment 37 in stock
-          .products__cell
-            .products__color
-              .products__bg style=("background-color: #FFA2C0;") 
-              .products__text Pink
-          .products__cell
-            .products__cost
-              .products__money $68.00
-              .products__tooltip
-                .products__sale
-                  .products__icon.bg-red
-                    = image_tag('wallets/images/chat-black.svg', class: "products__pic")
-                  .products__caption.caption-sm Latest Sale
-                .products__price.h3 $68
-                .products__progress
-                  span style=("width: 68%;") 
-          .products__cell
-            .products__rating
-              span.color-green 5.0
-              | (45 votes)
-        .products__body
-          .products__bg style=("background-color: #FFA2C0;") 
-          .products__line
-            .products__col
-              .products__money $68.45
-            .products__col 37 in stock
-            .products__col.color-green 5.0
-        .products__row
-          .products__cell
-            label.checkbox
-              input.checkbox__input type="checkbox" /
-              span.checkbox__in
-                span.checkbox__tick
-          .products__cell
-            a.products__item href="#" 
-              .products__preview
-                = image_tag('wallets/images/product-pic.png', class: "products__pic")
-              .products__details
-                .products__title.title Abstract 3D Kit
-                .products__info.caption.color-gray 3D Illustration
-          .products__cell
-            .products__payment 37 in stock
-          .products__cell
-            .products__color
-              .products__bg style=("background-color: #3a4dd6;") 
-              .products__text Purple
-          .products__cell
-            .products__cost
-              .products__money $68.00
-              .products__tooltip
-                .products__sale
-                  .products__icon.bg-red
-                    = image_tag('wallets/images/chat-black.svg', class: "products__pic")
-                  .products__caption.caption-sm Latest Sale
-                .products__price.h3 $68
-                .products__progress
-                  span style=("width: 68%;") 
-          .products__cell
-            .products__rating
-              span.color-green 5.0
-              | (45 votes)
-        .products__body
-          .products__bg style=("background-color: #3a4dd6;") 
-          .products__line
-            .products__col
-              .products__money $68.45
-            .products__col 37 in stock
-            .products__col.color-green 5.0
-        .products__row
-          .products__cell
-            label.checkbox
-              input.checkbox__input type="checkbox" /
-              span.checkbox__in
-                span.checkbox__tick
-          .products__cell
-            a.products__item href="#" 
-              .products__preview
-                = image_tag('wallets/images/product-pic.png', class: "products__pic")
-              .products__details
-                .products__title.title Sapiens Illustration
-                .products__info.caption.color-gray 3D Illustration
-          .products__cell
-            .products__payment 37 in stock
-          .products__cell
-            .products__color
-              .products__bg style=("background-color: #7FBA7A;") 
-              .products__text Green
-          .products__cell
-            .products__cost
-              .products__money $68.00
-              .products__tooltip
-                .products__sale
-                  .products__icon.bg-red
-                    = image_tag('wallets/images/chat-black.svg', class: "products__pic")
-                  .products__caption.caption-sm Latest Sale
-                .products__price.h3 $68
-                .products__progress
-                  span style=("width: 68%;") 
-          .products__cell
-            .products__rating
-              span.color-green 5.0
-              | (45 votes)
-        .products__body
-          .products__bg style=("background-color: #7FBA7A;") 
-          .products__line
-            .products__col
-              .products__money $68.45
-            .products__col 37 in stock
-            .products__col.color-green 5.0
-        .products__row
-          .products__cell
-            label.checkbox
-              input.checkbox__input type="checkbox" /
-              span.checkbox__in
-                span.checkbox__tick
-          .products__cell
-            a.products__item href="#" 
-              .products__preview
-                = image_tag('wallets/images/product-pic.png', class: "products__pic")
-              .products__details
-                .products__title.title Collab Landing Page
-                .products__info.caption.color-gray 3D Illustration
-          .products__cell
-            .products__payment 37 in stock
-          .products__cell
-            .products__color
-              .products__bg style=("background-color: #FFCE73;") 
-              .products__text Yellow
-          .products__cell
-            .products__cost
-              .products__money $68.00
-              .products__tooltip
-                .products__sale
-                  .products__icon.bg-red
-                    = image_tag('wallets/images/chat-black.svg', class: "products__pic")
-                  .products__caption.caption-sm Latest Sale
-                .products__price.h3 $68
-                .products__progress
-                  span style=("width: 68%;") 
-          .products__cell
-            .products__rating
-              span.color-green 5.0
-              | (45 votes)
-        .products__body
-          .products__bg style=("background-color: #FFCE73;") 
-          .products__line
-            .products__col
-              .products__money $68.45
-            .products__col 37 in stock
-            .products__col.color-green 5.0
-      .products__more
-        button.products__btn.btn.btn_black Load More
+          .products__cell Delete
+        - if @movies.present?
+          - @movies.each do |movie|
+            .products__row
+              .products__cell
+                =link_to admin_movie_path(movie), class:'products__item' do
+                  .products__previeww
+                    - if movie.photo.attached?
+                      = image_tag(movie.photo, class: "products__pic")
+                  .products__details
+                    .products__title.title  = movie.title
+                    .products__info.caption.color-gray.movie_desc = movie.description
+              .products__cell
+                .products__payment = movie.original_language
+              .products__cell
+                .products__color
+                  .products__bg style=("background-color: #3a4dd6;") 
+                  .products__text Visible
+              .products__cell
+                .products__cost
+                  .products__money = movie.genres
+              .products__cell
+                .products__rating
+                  span.color-green 5.0
+                  | (45 votes)
+              .products__cell
+                .sorting__actions
+                  =button_to admin_movie_path(movie), method: :delete, class:'sorting__action', data: {confirm: "Are you sure?"} do
+                    = svg_use('wallets/images/sprite.svg#icon-edit', class: 'icon icon-edit')
+          / .products__more
+          /   button.products__btn.btn.btn_black Load More

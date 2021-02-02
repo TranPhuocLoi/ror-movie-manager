@@ -3946,7 +3946,7 @@ body.dark .dropdown.active .dropdown__head {
 }
 
 .products_main .products__cell:nth-child(2) {
-  font-size: 0;
+  // font-size: 0;
 }
 
 .products_main .products__col:first-child {
@@ -5724,7 +5724,7 @@ body.dark .tabs__link:hover {
 .payment__details {
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  width: 225px;
+  width: 350px;
   margin-right: 16px;
   padding: 32px;
   border-radius: 16px;
@@ -5765,12 +5765,12 @@ body.dark .tabs__link:hover {
 
 .payment__info {
   width: 100%;
-  max-width: 140px;
   color: #b2b3bd;
+  font-size: 14px;
 }
 
 .payment__details .payment__info {
-  margin: 0 auto 32px;
+  margin: 0 auto 8px;
 }
 
 .payment__logo {

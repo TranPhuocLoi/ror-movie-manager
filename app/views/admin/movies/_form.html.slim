@@ -1,5 +1,4 @@
 =form_for @movie, url: admin_movies_path(@movie), html: {class: 'popup__form'} do |f|
-  .popup__title.h6 Add new movie
   .popup__fieldset
     .popup__row
       .popup__field.field
@@ -12,12 +11,19 @@
             = f.text_field :genres, class: 'field__input'
     .popup__row
       .popup__field.field
-        .field__label Description
-        .field__wrap
-          = f.text_area :description, class: 'field__textarea'
-      .popup__field.field
         .field__label Language
         .field__wrap
           = f.text_field :original_language, class: 'field__input'
-        button.popup__btn.btn.btn_black.mt-5 type="submit" Create Moive
+      .popup__field.field
+        .field__label Photo
+        .field__wrap
+          .popup__loading
+            = f.file_field :photo, accept: 'image/png,image/jpeg', class: 'popup__file'
+            button.popup__btn.btn.btn_purple Upload Photo
+    .popup__row
+      .popup__field.field.field_custom
+        .field__label Description
+        .field__wrap
+          = f.text_area :description, class: 'field__textarea'
+    button.popup__btn.btn.btn_black.mt-5 type="submit" Update
   

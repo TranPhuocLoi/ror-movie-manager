@@ -4,5 +4,6 @@ module Admin
     def index
       @movies = Movie.all
     end
+    
   end
 end

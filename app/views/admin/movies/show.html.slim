@@ -1,0 +1,134 @@
+.page__row.page__row_border
+  .page__col
+    .details.details_statements
+      .details__container
+        .details__title.h6.mobile-hide Movie Detail
+        .payment
+          .payment__row
+            .payment__details
+              .payment__preview.bg-purple-light
+                = image_tag('wallets/images/figure-5.png', class: "details__pic")
+              .payment__mail.title = @movie.title
+              .payment__info.caption-sm = @movie.description
+              .payment__info.caption-sm  Genres: #{@movie.genres}
+              .payment__info.caption-sm  Language: #{@movie.original_language}
+              = link_to "Edit", edit_admin_movie_path, class:"quality__btn btn btn_black btn_wide"
+              = link_to "View all moives", admin_root_path, class:"quality__btn btn btn_purple btn_wide"
+            .payment__variants
+              = image_tag(@movie.photo, class: "details__pic")
+    .details.details_statements
+      .details__container
+        .details__title.h6.mobile-hide Movie Report
+        .dropdown.js-dropdown
+          .dropdown__head.js-dropdown-head Last 30 days
+          .dropdown__body.js-dropdown-body
+            a.dropdown__item href="#" 
+              .dropdown__title.title Bento 3D Kit
+              .dropdown__info.caption Illustration
+            a.dropdown__item href="#" 
+              .dropdown__title.title Bento 3D Kit
+              .dropdown__info.caption Illustration
+            a.dropdown__item href="#" 
+              .dropdown__title.title Collab UI Kit
+              .dropdown__info.caption Coded Template
+        .details__row
+          .details__col
+            .details__top
+              .details__number.h1 586 Views
+              a.details__line href="#" 
+                .details__preview
+                  = image_tag('wallets/images/details-pic-1.png', class: "details__pic")
+                .details__info.caption-sm Your total earnings
+            .details__bottom
+              .details__statistics
+                .details__chart.details__chart_activity
+                  #chart-active-users
+                .details__status
+                  .details__icon.bg-green
+                    = svg_use('wallets/images/sprite.svg#icon-arrow-up-fat', class: 'icon icon-arrow-up-fat')
+                  .details__percent.caption-sm.color-green 6%
+              .details__info.caption-sm Update your payout method in Settings
+          .details__col
+            .details__chart.details__chart_report
+              #chart-report
+        .details__list.details__list_three
+          .details__item
+            .details__head
+              .details__preview.bg-purple
+                = image_tag('wallets/images/folder.svg', class: "details__pic")
+              .details__text.caption-sm Total Earnings
+            .details__counter.h4 $586.75
+            .details__indicator
+              .details__progress.bg-purple style=("width: 55%;") 
+          .details__item
+            .details__head
+              .details__preview.bg-pink
+                = image_tag('wallets/images/activity.svg', class: "details__pic")
+              .details__text.caption-sm Item Earnings
+            .details__counter.h4 $425.94
+            .details__indicator
+              .details__progress.bg-pink style=("width: 52%;") 
+          .details__item
+            .details__head
+              .details__preview.bg-blue
+                = image_tag('wallets/images/bag.svg', class: "details__pic")
+              .details__text.caption-sm Tax withheld
+            .details__counter.h4 $25.94
+            .details__indicator
+              .details__progress.bg-blue style=("width: 55%;") 
+  .page__col
+    .page__group
+      .widget.widget_stat.widget_shadow.widget_after
+        .widget__chart.widget__chart_items
+          #chart-earnings-by-item
+        .widget__title Earnings By Item
+        .widget__counter.title.title_md 479.4
+        .widget__text.widget__text_mb40 Update your payout method in Settings
+        .widget__legend
+          .widget__color
+            .widget__bg style=("background: #3a4dd6;") 
+            .widget__text Templates
+          .widget__color
+            .widget__bg style=("background: #FFA2C0;") 
+            .widget__text Themes
+      .widget.widget_shadow.widget_after
+        .widget__title.mr-auto Your Top Items
+        .quality.quality_big
+          .quality__list
+            a.quality__item href="#" 
+              .quality__preview.bg-pink-opacity
+                = image_tag('wallets/images/figure-1.png', class: "quality__pic")
+              .quality__details
+                .quality__category.title
+                  | Unity UI Kit
+                  = svg_use('wallets/images/sprite.svg#icon-arrow-right', class: 'icon icon-arrow-right')
+                .quality__info.caption-sm UI Design
+                .quality__money.caption $64
+            a.quality__item href="#" 
+              .quality__preview.bg-pink-opacity
+                = image_tag('wallets/images/figure-2.png', class: "quality__pic")
+              .quality__details
+                .quality__category.title
+                  | Unity UI Kit
+                  = svg_use('wallets/images/sprite.svg#icon-arrow-right', class: 'icon icon-arrow-right')
+                .quality__info.caption-sm UI Design
+                .quality__money.caption $64
+            a.quality__item href="#" 
+              .quality__preview.bg-blue-light
+                = image_tag('wallets/images/figure-6.png', class: "quality__pic")
+              .quality__details
+                .quality__category.title
+                  | Unity UI Kit
+                  = svg_use('wallets/images/sprite.svg#icon-arrow-right', class: 'icon icon-arrow-right')
+                .quality__info.caption-sm UI Design
+                .quality__money.caption $64
+            a.quality__item href="#" 
+              .quality__preview.bg-yellow
+                = image_tag('wallets/images/figure-4.png', class: "quality__pic")
+              .quality__details
+                .quality__category.title
+                  | Unity UI Kit
+                  = svg_use('wallets/images/sprite.svg#icon-arrow-right', class: 'icon icon-arrow-right')
+                .quality__info.caption-sm UI Design
+                .quality__money.caption $64
+          button.quality__btn.btn.btn_black.btn_wide Show all report

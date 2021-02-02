@@ -16,10 +16,10 @@
             | Nudo
             span Cinema
           .sidebar__menu
-            = link_to '#', class: "sidebar__item #{active_class?(admin_root_path)}" do
+            = link_to admin_root_path, class: "sidebar__item #{active_class?(admin_root_path)}" do
               .sidebar__icon
                 = svg_use('wallets/images/sprite.svg#icon-overview', class: 'icon icon-overview')
-              .sidebar__text My Collection
+              .sidebar__text Dashboard
             = link_to '#', class: "sidebar__item #{active_class?(web_root_path)}" do
               .sidebar__icon
                 = svg_use('wallets/images/sprite.svg#icon-chart', class: 'icon icon-bag')

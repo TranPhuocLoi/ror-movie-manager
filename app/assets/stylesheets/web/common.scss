@@ -1,0 +1,190 @@
+.page-form {
+  position: relative;
+  overflow-x: hidden;
+  min-height: 100vh;
+  .btn {
+    height: 60px;
+  }
+  .discover {
+    min-height: 100vh;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    .discover__center {
+      margin: 30px auto;
+      width: 100%;
+      .contacts {
+        margin-bottom: 0;
+        .contacts__container {
+          padding: 80px 60px;
+        }
+        .contacts__row {
+          margin-bottom: 0;
+          .contacts__wrap {
+            margin-bottom: 0;
+            width: 50%;
+          }
+          .contacts__title {
+            color: #111029;
+          }
+          .contacts__form {
+            min-height: 30vh;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: space-between;
+            text-align: center;
+            .contact_submit {
+              margin-top: 40px;
+              .field__wrap {
+                .icon-arrow-left {
+                  fill: #4c40f7;
+                  width: 0.8em;
+                  height: 0.8em;
+                  margin-right: 10px;
+                }
+              }
+            }
+            .contacts__field {
+              .field__wrap {
+                .field-icon-password {
+                  z-index: 9;
+                  pointer-events: visible;
+                  cursor: pointer;
+                }
+              }
+              .forgot_password {
+                margin-top: 15px;
+                text-align: right;
+                a {
+                  color: #4c40f7;
+                  font-size: 14px;
+                  font-weight: 600;
+                }
+              }
+              .registering_account {
+                margin-top: 15px;
+                p {
+                  text-align: left;
+                  font-size: 12px;
+                  color: #6b6b6b;
+                  a {
+                    color: #4c40f7;
+                    font-size: 12px;
+                    font-weight: 600;
+                  }
+                }
+              }
+              .sign_up {
+                color: #6b6b6b;
+                font-size: 16px;
+                font-weight: 500;
+                a {
+                  color: #4c40f7;
+                  font-size: 16px;
+                  font-weight: 500;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#forgot_password, #update_password {
+  .discover {
+    .discover__center {
+      max-width: 800px;
+      .contacts__form {
+        .contact__group {
+          .contacts__stage {
+            text-align: left;
+          }
+        }
+        .contacts__btn {
+          .btn_purple {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1023px) and (max-width: 1023px) {
+  .contacts__row {
+    display: flex !important;
+  }
+  .page-form .discover .discover__center .contacts .contacts__container {
+    padding: 60px 30px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .page-form
+    .discover
+    .discover__center
+    .contacts
+    .contacts__row
+    .contacts__title {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .page-form
+    .discover
+    .discover__center
+    .contacts
+    .contacts__row
+    .contacts__title {
+    font-size: 36px;
+  }
+  .contacts__container {
+    border-radius: 34px !important;
+    background: #fff !important;
+  }
+  .contacts__row {
+    display: block !important;
+  }
+  .page-form
+    .discover
+    .discover__center
+    .contacts
+    .contacts__row
+    .contacts__wrap {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .page-form
+    .discover
+    .discover__center
+    .contacts
+    .contacts__row
+    .contacts__form {
+    width: 100%;
+  }
+  .discover__center .contacts .contacts__container {
+    padding: 40px 30px !important;
+  }
+  .page-form
+    .discover
+    .discover__center
+    .contacts
+    .contacts__row
+    .contacts__form {
+    min-height: 300px;
+  }
+  .contact_submit {
+    margin-top: 30px;
+  }
+  .contacts__btn .btn {
+    min-width: 100%;
+  }
+}
+
+.hide {
+  display: none;
+}

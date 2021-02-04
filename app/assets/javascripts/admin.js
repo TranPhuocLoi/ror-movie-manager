@@ -1,4 +1,5 @@
 //= require jquery3
+//= require rails-ujs
 //= require bootstrap-sprockets
 //= require wallets/lib/jquery.min
 //= require wallets/lib/apexcharts.min

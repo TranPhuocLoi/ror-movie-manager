@@ -6,8 +6,11 @@ Rails.application.routes.draw do
 
   scope '/admin', module: :admin, as: :admin do
     root 'movies_dashboard#index'
-    # post "movie", to: 'movies_dashboard#create'
     resources :movies
+    devise_for :users, controllers: {
+    sessions: 'users/sessions',
+    registrations: 'users/registrations',
+  }
   end
   
 end

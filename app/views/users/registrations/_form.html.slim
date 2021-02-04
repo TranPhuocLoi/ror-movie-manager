@@ -1,0 +1,35 @@
+= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: 'contacts__form'}) do |f|
+  .contact__group
+    .contacts__field.field
+      .field__wrap
+        = f.email_field :email, autofocus: true, autocomplete: "email", class: 'field__input', placeholder: "Email"
+        .field__icon
+          = svg_use('web/hp/sprite.svg#icon-send', class: 'icon icon-send')
+    .contacts__field.field
+      .field__wrap
+        = f.password_field :password, autocomplete: "new-password", class: 'field__input input-password', placeholder: "Password"
+        .field__icon.field-icon-password onClick="showHidePassword($(this), 'web_user_password')"
+          = svg_use('web/hp/sprite.svg#icon-eye-flash', class: 'icon icon-eye-flash')
+          = svg_use('web/hp/sprite.svg#icon-eye', class: 'icon icon-eye hide')
+    .contacts__field.field
+      .field__wrap
+        = f.password_field :password_confirmation, autocomplete: "new-password", class: 'field__input input-password', placeholder: "Confirm Password"
+        .field__icon.field-icon-password onClick="showHidePassword($(this), 'web_user_password_confirmation')"
+          = svg_use('web/hp/sprite.svg#icon-eye-flash', class: 'icon icon-eye-flash')
+          = svg_use('web/hp/sprite.svg#icon-eye', class: 'icon icon-eye hide')
+      .field__wrap.registering_account
+        p 
+          | By registering, I confirm that I have read and accept the 
+          a.text-secondary href="#" Terms & Conditions 
+          | and 
+          a.text-secondary href="#" Privacy Policy.
+    .contacts__field.field
+      .actions.contacts__btn
+        = f.button :submit, class: 'btn btn_purple' do 
+          span.btn__text
+          | Sign Up
+          = svg_use('web/hp/sprite.svg#icon-arrow-right', class: 'icon icon-arrow-right')
+  .contacts__field.contact_submit
+    .field__wrap.sign_up
+      | Already have an account? 
+      = link_to "Sign In", admin_user_session_path, class: 'text-secondary'

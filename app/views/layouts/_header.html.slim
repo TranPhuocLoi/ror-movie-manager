@@ -100,11 +100,15 @@ header.ht-header
               li.it-last
                 a href="comingsoon.html"  Coming soon
           li
-            a href="#"  Help
-          li.loginLink
-            a href="#"  LOG In
-          li.btn.signupLink
-            a href="#"  sign up
+            a href="/aaa"  Help
+          - if current_admin_user.present?
+            li.btn.signupLink
+              = link_to 'Logout', destroy_admin_user_session_path, method: "get"
+          - else
+            li.loginLink
+              = link_to 'Login', admin_user_session_path, class:""
+            li.btn.signupLink
+              = link_to 'Sign up', new_admin_user_registration_path, class:""
     form action="#" 
       .top-search
         select

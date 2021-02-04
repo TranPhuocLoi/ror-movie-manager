@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
+    meta content=("IE=edge") http-equiv="X-UA-Compatible" /
+    meta content=("width=device-width, initial-scale=1") name="viewport" /
+    meta content=("") name="description" /
+    meta content=("") name="keywords" /
+    title Bookmarkx Auth
+    link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" /
+    = favicon_link_tag 'logo.svg', rel: 'shortcut icon', type: 'image/svg'
+    = favicon_link_tag 'logo.svg', rel: 'apple-touch-icon', type: 'image/svg'
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag 'auth', media: 'all'
+    
+  body
+    main
+      = yield
+    = javascript_include_tag 'web'

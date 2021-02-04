@@ -1,0 +1,25 @@
+= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: 'contacts__form'}) do |f|
+  .contact__group
+    .contacts__field.field
+      .field__wrap
+        = f.email_field :email, autofocus: true, autocomplete: "email", class: 'field__input', placeholder: "Email"
+        .field__icon
+          = svg_use('web/hp/sprite.svg#icon-send', class: 'icon icon-send')
+    .contacts__field.field
+      .field__wrap
+        = f.password_field :password, autocomplete: "current-password", class: 'field__input input-password', placeholder: "Password"
+        .field__icon.field-icon-password onClick="showHidePassword($(this), 'web_user_password')"
+          = svg_use('web/hp/sprite.svg#icon-eye-flash', class: 'icon icon-eye-flash')
+          = svg_use('web/hp/sprite.svg#icon-eye', class: 'icon icon-eye hide')
+      / .field__wrap.forgot_password
+      /   = link_to "Forgot Your Password?", new_admin_user_password_path, class: 'text-secondary'
+    .contacts__field.field
+      .actions.contacts__btn
+        = f.button :submit, class: 'btn btn_purple' do 
+          span.btn__text
+          | Sign In
+          = svg_use('web/hp/sprite.svg#icon-arrow-right', class: 'icon icon-arrow-right')
+  .contacts__field.contact_submit
+    .field__wrap.sign_up
+      | Don't have an account ? 
+      = link_to "Sign up", new_admin_user_registration_path, class: 'text-secondary'

@@ -7,8 +7,12 @@ module Admin
 
     def create
       @movie = Movie.new(admin_movie_params)
-      @movie.save
-      redirect_to admin_movie_path(@movie)
+      @movie.user = current_admin_user
+      if @movie.save
+        redirect_to admin_movie_path(@movie)
+      else
+        render 'new'
+      end
     end
 
     def show

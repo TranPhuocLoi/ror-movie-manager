@@ -4,10 +4,10 @@
 })();
 
 // carousel arrows
-var navArrows = [
-  '\n    <svg class="icon icon-arrow-prev">\n        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arrow-prev"></use>\n    </svg>',
-  '<svg class="icon icon-arrow-next">\n        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arrow-next"></use>\n    </svg>',
-];
+// var navArrows = [
+//   '\n    <svg class="icon icon-arrow-prev">\n        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arrow-prev"></use>\n    </svg>',
+//   '<svg class="icon icon-arrow-next">\n        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arrow-next"></use>\n    </svg>',
+// ];
 
 // owl carousel
 $(document).ready(function () {
@@ -37,8 +37,8 @@ $(document).ready(function () {
   var dropdown = $(".js-dropdown");
   dropdown.each(function () {
     var item = $(this);
-    head = item.find(".js-dropdown-head"),
-    body = item.find(".js-dropdown-body");
+    (head = item.find(".js-dropdown-head")),
+      (body = item.find(".js-dropdown-body"));
     head.on("click", function (e) {
       e.stopPropagation();
       e.preventDefault();

@@ -108,7 +108,7 @@
             .sidebar__icon
               = svg_use('wallets/images/sprite.svg#icon-profile', class: 'icon icon-profile')
             .sidebar__text Profile
-          = link_to destroy_admin_user_session_path, method: "delete", class: 'sidebar__link' do
+          = link_to destroy_admin_user_session_path, method: "get", class: 'sidebar__link' do
             .sidebar__icon
               = svg_use('wallets/images/sprite.svg#icon-logout', class: 'icon icon-logout')
             .sidebar__text Log out

@@ -69,3 +69,4 @@ gem 'animate-rails'
 gem 'ionicons-rails'
 gem 'sidekiq', '6.0.1'
 gem 'sidekiq-scheduler', '~> 3.0', '>= 3.0.1'
+
